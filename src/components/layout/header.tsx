@@ -6,10 +6,9 @@ import { Menu, X, Sparkles } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navigation = [
+  { name: 'Who We Are', href: '/#who-we-are' },
   { name: 'Services', href: '/services' },
-  { name: 'Demos', href: '/demos' },
   { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Blog', href: '/blog' },
   { name: 'About', href: '/about' },
 ]
 
@@ -70,7 +69,7 @@ export function Header() {
               href="/contact"
               className="rounded-full bg-brand-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand-500/25 transition-all hover:bg-brand-600 hover:shadow-brand-500/40 hover:scale-105"
             >
-              Book a Call
+              Work With Us
             </Link>
           </div>
         </div>
@@ -98,7 +97,7 @@ export function Header() {
               className="block rounded-lg px-3 py-2.5 text-base font-semibold text-brand-400 hover:bg-white/5"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Book a Call
+              Work With Us
             </Link>
           </div>
         </div>

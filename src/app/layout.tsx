@@ -22,21 +22,22 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://orquestra.ai'),
   title: {
-    default: 'orquestraAI | AI Technology Services',
+    default: 'orquestraAI | Deep Tech AI Engineering',
     template: '%s | orquestraAI',
   },
   description:
-    'We build custom AI agents, chatbots, and intelligent systems that transform how businesses operate. From strategy to deployment, we orchestrate AI solutions that deliver real ROI.',
+    'We engineer mathematically rigorous AI systems from first principles. Custom models, statistical inference, deep learning architectures, and production ML — built by researchers, shipped by engineers.',
   keywords: [
-    'AI services',
-    'custom AI agents',
-    'AI consulting',
-    'chatbot development',
-    'AI integration',
-    'machine learning',
-    'AI automation',
-    'AI strategy',
-    'artificial intelligence company',
+    'deep tech AI',
+    'machine learning engineering',
+    'statistical modeling',
+    'custom AI models',
+    'Bayesian inference',
+    'neural network architecture',
+    'MLOps',
+    'AI research',
+    'mathematical AI',
+    'production ML systems',
   ],
   authors: [{ name: 'orquestraAI' }],
   creator: 'orquestraAI',
@@ -45,23 +46,23 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://orquestra.ai',
     siteName: 'orquestraAI',
-    title: 'orquestraAI | AI Technology Services',
+    title: 'orquestraAI | Deep Tech AI Engineering',
     description:
-      'We build custom AI agents, chatbots, and intelligent systems that transform how businesses operate.',
+      'We engineer mathematically rigorous AI systems from first principles. Custom models, statistical inference, and production ML.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'orquestraAI - AI Technology Services',
+        alt: 'orquestraAI - Deep Tech AI Engineering',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'orquestraAI | AI Technology Services',
+    title: 'orquestraAI | Deep Tech AI Engineering',
     description:
-      'We build custom AI agents, chatbots, and intelligent systems that transform how businesses operate.',
+      'We engineer mathematically rigorous AI systems from first principles. Custom models, statistical inference, and production ML.',
     images: ['/og-image.png'],
   },
   robots: {

@@ -3,22 +3,16 @@ import { Sparkles, Github, Linkedin, Twitter } from 'lucide-react'
 
 const footerLinks = {
   services: [
-    { name: 'AI Agents', href: '/services/ai-agents' },
-    { name: 'AI Consulting', href: '/services/consulting' },
-    { name: 'Chatbots', href: '/services/chatbots' },
-    { name: 'AI Integration', href: '/services/integrations' },
-    { name: 'Data & ML', href: '/services/data' },
+    { name: 'Custom AI Systems', href: '/services/ai-agents' },
+    { name: 'Statistical Modeling', href: '/services/consulting' },
+    { name: 'AI Infrastructure', href: '/services/integrations' },
+    { name: 'Data Science', href: '/services/data' },
   ],
   company: [
+    { name: 'Who We Are', href: '/#who-we-are' },
     { name: 'About', href: '/about' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
-  ],
-  resources: [
-    { name: 'Live Demos', href: '/demos' },
-    { name: 'AI Readiness Quiz', href: '/quiz' },
-    { name: 'Documentation', href: '/docs' },
   ],
 }
 
@@ -32,7 +26,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-navy-950">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
@@ -42,8 +36,8 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-gray-400 max-w-xs">
-              Orchestrating intelligent AI solutions for businesses ready to
-              transform their operations and unlock new possibilities.
+              Deep tech AI engineering. We build mathematically rigorous, 
+              production-grade intelligent systems from first principles.
             </p>
             <div className="mt-6 flex gap-4">
               {socialLinks.map((item) => (
@@ -62,7 +56,7 @@ export function Footer() {
           </div>
 
           {/* Links */}
-          <div className="grid grid-cols-2 gap-8 lg:col-span-3 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8 lg:col-span-2">
             <div>
               <h3 className="text-sm font-semibold text-white">Services</h3>
               <ul className="mt-4 space-y-3">
@@ -82,21 +76,6 @@ export function Footer() {
               <h3 className="text-sm font-semibold text-white">Company</h3>
               <ul className="mt-4 space-y-3">
                 {footerLinks.company.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-gray-400 transition-colors hover:text-white"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-white">Resources</h3>
-              <ul className="mt-4 space-y-3">
-                {footerLinks.resources.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
