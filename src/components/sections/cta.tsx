@@ -13,12 +13,11 @@ export function CTASection() {
           <div className="relative">
             <Sparkles className="h-12 w-12 text-white/80 mx-auto" />
             <h2 className="mt-6 font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-              Ready to Transform Your Business with AI?
+              Let&apos;s Build Something Intelligent
             </h2>
             <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
-              Schedule a free 30-minute discovery call. We&apos;ll discuss your
-              challenges, explore AI opportunities, and outline a clear path
-              forward.
+              Whether you need a custom model, a production ML system, or deep
+              technical guidance — we&apos;re here to help you push boundaries.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -27,7 +26,7 @@ export function CTASection() {
                 className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-brand-700 shadow-lg transition-all hover:scale-105 hover:shadow-xl"
               >
                 <Calendar className="h-5 w-5" />
-                Book Your Free Call
+                Schedule a Call
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
@@ -39,8 +38,7 @@ export function CTASection() {
             </div>
 
             <p className="mt-6 text-sm text-white/60">
-              No commitment required. We&apos;ll give you honest advice even if
-              we&apos;re not the right fit.
+              No fluff. Just an honest technical conversation about your problem.
             </p>
           </div>
         </div>

@@ -1,55 +1,55 @@
 import Link from 'next/link'
 import {
-  Bot,
   BrainCircuit,
-  MessageSquare,
-  Plug,
+  Sigma,
+  Cpu,
+  GitBranch,
   BarChart3,
   ArrowRight,
 } from 'lucide-react'
 
 const services = [
   {
-    icon: Bot,
-    title: 'Custom AI Agents',
+    icon: BrainCircuit,
+    title: 'Custom AI & ML Systems',
     description:
-      'Purpose-built AI agents that automate complex workflows, make decisions, and interact with your systems autonomously.',
+      'End-to-end design and implementation of neural architectures, reinforcement learning systems, and autonomous agents tailored to your domain.',
     href: '/services/ai-agents',
     color: 'text-brand-400',
     bgColor: 'bg-brand-500/10',
   },
   {
-    icon: BrainCircuit,
-    title: 'AI Consulting & Strategy',
+    icon: Sigma,
+    title: 'Statistical Modeling & Inference',
     description:
-      'Expert guidance on where AI fits in your business, ROI analysis, and a clear roadmap to implementation.',
+      'Bayesian inference, causal modeling, time-series forecasting, and probabilistic programming for decision-making under uncertainty.',
     href: '/services/consulting',
     color: 'text-accent-cyan',
     bgColor: 'bg-accent-cyan/10',
   },
   {
-    icon: MessageSquare,
-    title: 'Conversational AI',
+    icon: Cpu,
+    title: 'AI Infrastructure & MLOps',
     description:
-      'Intelligent chatbots and virtual assistants that handle customer support, sales, and internal operations.',
-    href: '/services/chatbots',
+      'Production ML pipelines, model serving at scale, GPU-optimized training infrastructure, and continuous monitoring systems.',
+    href: '/services/integrations',
     color: 'text-accent-emerald',
     bgColor: 'bg-accent-emerald/10',
   },
   {
-    icon: Plug,
-    title: 'AI Integration',
+    icon: GitBranch,
+    title: 'Research & Prototyping',
     description:
-      'Seamlessly connect AI and LLM capabilities into your existing tech stack without disrupting operations.',
-    href: '/services/integrations',
+      'Turning cutting-edge research into working prototypes. Novel algorithm design, paper implementations, and feasibility analysis.',
+    href: '/services/consulting',
     color: 'text-accent-amber',
     bgColor: 'bg-accent-amber/10',
   },
   {
     icon: BarChart3,
-    title: 'Data & ML Pipelines',
+    title: 'Data Science & Analytics',
     description:
-      'Build robust data infrastructure and machine learning pipelines that turn your data into actionable intelligence.',
+      'Advanced analytics, feature engineering, A/B testing frameworks, and mathematical optimization for business-critical decisions.',
     href: '/services/data',
     color: 'text-brand-300',
     bgColor: 'bg-brand-300/10',
@@ -58,16 +58,16 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="relative py-24 sm:py-32" id="services">
+    <section className="relative py-24 sm:py-32 border-t border-white/5" id="services">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white">
-            AI Services That <span className="text-gradient">Deliver Results</span>
+            What We <span className="text-gradient">Build</span>
           </h2>
           <p className="mt-4 text-lg text-gray-400">
-            End-to-end AI solutions tailored to your business needs, from strategy
-            to deployment and ongoing optimization.
+            Deep technical work at the frontier of AI. No templates, no shortcuts —
+            just rigorous engineering.
           </p>
         </div>
 
@@ -100,17 +100,17 @@ export function ServicesSection() {
           {/* CTA card */}
           <div className="relative rounded-2xl bg-gradient-brand p-8 flex flex-col justify-center items-center text-center">
             <h3 className="text-xl font-semibold text-white">
-              Not sure where to start?
+              Have a hard problem?
             </h3>
             <p className="mt-2 text-sm text-white/80">
-              Book a free AI readiness assessment and we&apos;ll help you identify
-              the highest-impact opportunities.
+              We love the kind of problems that others say can&apos;t be solved.
+              Let&apos;s talk about yours.
             </p>
             <Link
               href="/contact"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-brand-700 transition-all hover:scale-105"
             >
-              Get Started
+              Get In Touch
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

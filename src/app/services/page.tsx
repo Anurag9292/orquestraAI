@@ -1,91 +1,96 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  Bot,
   BrainCircuit,
-  MessageSquare,
-  Plug,
+  Sigma,
+  Cpu,
+  GitBranch,
   BarChart3,
   ArrowRight,
   CheckCircle,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'AI Services',
+  title: 'Services',
   description:
-    'Comprehensive AI services including custom AI agents, consulting, chatbots, integrations, and data analytics. From strategy to deployment.',
+    'Deep tech AI services: custom model development, statistical modeling, ML infrastructure, research prototyping, and data science.',
 }
 
 const services = [
   {
-    icon: Bot,
-    title: 'Custom AI Agents',
+    icon: BrainCircuit,
+    title: 'Custom AI & ML Systems',
     description:
-      'Purpose-built AI agents that automate complex workflows, make decisions, and interact with your systems autonomously.',
+      'End-to-end design and implementation of neural architectures, reinforcement learning systems, and autonomous agents. We build models from scratch when off-the-shelf doesn\'t cut it.',
     href: '/services/ai-agents',
     features: [
-      'Multi-step task automation',
-      'Tool-use and API integration',
-      'Human-in-the-loop oversight',
-      'Continuous learning & improvement',
+      'Custom neural architecture design',
+      'Model training & fine-tuning at scale',
+      'Reinforcement learning systems',
+      'Multi-agent orchestration',
+      'Domain-specific model development',
+      'Performance optimization & distillation',
     ],
-    pricing: 'Starting at $10,000',
   },
   {
-    icon: BrainCircuit,
-    title: 'AI Consulting & Strategy',
+    icon: Sigma,
+    title: 'Statistical Modeling & Inference',
     description:
-      'Expert guidance on where AI fits in your business, ROI analysis, and a clear roadmap to implementation.',
+      'Rigorous probabilistic modeling for decision-making under uncertainty. We speak the language of Bayes, information theory, and causal reasoning.',
     href: '/services/consulting',
     features: [
-      'AI readiness assessment',
-      'Opportunity identification',
-      'ROI modeling & projections',
-      'Technology stack recommendations',
+      'Bayesian inference & probabilistic programming',
+      'Causal modeling & counterfactual analysis',
+      'Time-series forecasting',
+      'A/B testing & experiment design',
+      'Risk modeling & quantification',
+      'Monte Carlo methods',
     ],
-    pricing: 'Starting at $2,500',
   },
   {
-    icon: MessageSquare,
-    title: 'Conversational AI & Chatbots',
+    icon: Cpu,
+    title: 'AI Infrastructure & MLOps',
     description:
-      'Intelligent chatbots and virtual assistants that handle customer support, sales, and internal operations.',
-    href: '/services/chatbots',
-    features: [
-      'Natural language understanding',
-      'Multi-channel deployment',
-      'Knowledge base integration',
-      'Handoff to human agents',
-    ],
-    pricing: 'Starting at $5,000',
-  },
-  {
-    icon: Plug,
-    title: 'AI Integration',
-    description:
-      'Seamlessly connect AI and LLM capabilities into your existing tech stack without disrupting operations.',
+      'Production-grade ML systems that scale. From GPU clusters to model serving, we build the infrastructure that makes AI reliable.',
     href: '/services/integrations',
     features: [
-      'API & webhook integrations',
-      'CRM & ERP connectivity',
-      'Legacy system compatibility',
-      'Real-time data sync',
+      'ML pipeline architecture',
+      'Model serving & inference optimization',
+      'GPU-optimized training infrastructure',
+      'Monitoring, drift detection & alerting',
+      'CI/CD for ML models',
+      'Cost optimization & auto-scaling',
     ],
-    pricing: 'Starting at $7,500',
+  },
+  {
+    icon: GitBranch,
+    title: 'Research & Prototyping',
+    description:
+      'Turning cutting-edge papers into working systems. We implement novel algorithms, run experiments, and validate feasibility before you commit.',
+    href: '/services/consulting',
+    features: [
+      'Paper implementation & reproduction',
+      'Novel algorithm design',
+      'Feasibility analysis & benchmarking',
+      'Rapid prototyping & iteration',
+      'Technical due diligence',
+      'State-of-the-art surveys',
+    ],
   },
   {
     icon: BarChart3,
-    title: 'Data & ML Pipelines',
+    title: 'Data Science & Optimization',
     description:
-      'Build robust data infrastructure and machine learning pipelines that turn your data into actionable intelligence.',
+      'Advanced analytics and mathematical optimization. We turn complex data into clear decisions and build systems that optimize themselves.',
     href: '/services/data',
     features: [
-      'Data pipeline architecture',
-      'Model training & fine-tuning',
-      'Real-time analytics dashboards',
-      'Predictive modeling',
+      'Feature engineering & selection',
+      'Mathematical optimization (LP, QP, MIP)',
+      'Recommendation systems',
+      'Anomaly detection',
+      'NLP & information extraction',
+      'Graph analytics',
     ],
-    pricing: 'Starting at $15,000',
   },
 ]
 
@@ -98,11 +103,11 @@ export default function ServicesPage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="font-display text-4xl sm:text-5xl font-bold text-white">
-              AI Services for <span className="text-gradient">Every Stage</span>
+              Deep Technical AI <span className="text-gradient">Services</span>
             </h1>
             <p className="mt-6 text-lg text-gray-400">
-              Whether you&apos;re just exploring AI or ready to scale, we have the
-              expertise and proven processes to deliver results.
+              We don&apos;t do surface-level AI. Every engagement is grounded in
+              mathematical rigor, systems thinking, and production-grade engineering.
             </p>
           </div>
         </div>
@@ -111,90 +116,52 @@ export default function ServicesPage() {
       {/* Services list */}
       <section className="pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-12">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div
               key={service.title}
-              className="glass rounded-2xl p-8 sm:p-10 grid grid-cols-1 lg:grid-cols-3 gap-8"
+              className="glass rounded-2xl p-8 sm:p-10"
             >
-              <div className="lg:col-span-2">
-                <div className="flex items-center gap-3">
-                  <service.icon className="h-8 w-8 text-brand-400" />
-                  <h2 className="text-2xl font-bold text-white">
-                    {service.title}
-                  </h2>
-                </div>
-                <p className="mt-4 text-gray-400 leading-relaxed">
-                  {service.description}
-                </p>
-                <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {service.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex items-center gap-2 text-sm text-gray-300"
-                    >
-                      <CheckCircle className="h-4 w-4 text-accent-emerald flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex items-center gap-3 mb-4">
+                <service.icon className="h-8 w-8 text-brand-400" />
+                <h2 className="text-2xl font-bold text-white">
+                  {service.title}
+                </h2>
               </div>
-              <div className="flex flex-col justify-between items-start lg:items-end">
-                <p className="text-sm text-gray-400">
-                  <span className="block text-lg font-semibold text-white">
-                    {service.pricing}
-                  </span>
-                  per project
-                </p>
-                <Link
-                  href={service.href}
-                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-brand-600 hover:scale-105"
-                >
-                  Learn More
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+              <p className="text-gray-400 leading-relaxed max-w-3xl">
+                {service.description}
+              </p>
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {service.features.map((feature) => (
+                  <div
+                    key={feature}
+                    className="flex items-center gap-2 text-sm text-gray-300"
+                  >
+                    <CheckCircle className="h-4 w-4 text-accent-emerald flex-shrink-0" />
+                    {feature}
+                  </div>
+                ))}
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Engagement models */}
-      <section className="py-24 border-t border-white/5">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-display text-3xl font-bold text-white">
-              Flexible Engagement Models
-            </h2>
-            <p className="mt-4 text-gray-400">
-              Choose the model that works best for your needs and budget.
-            </p>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="glass rounded-2xl p-8 text-center">
-              <h3 className="text-xl font-semibold text-white">Project-Based</h3>
-              <p className="mt-2 text-sm text-gray-400">
-                Fixed scope, fixed price. Perfect for well-defined AI projects
-                with clear deliverables.
-              </p>
-            </div>
-            <div className="glass rounded-2xl p-8 text-center border-brand-500/50">
-              <h3 className="text-xl font-semibold text-white">
-                Hybrid (Recommended)
-              </h3>
-              <p className="mt-2 text-sm text-gray-400">
-                Initial project build, then ongoing retainer for optimization,
-                support, and new features.
-              </p>
-            </div>
-            <div className="glass rounded-2xl p-8 text-center">
-              <h3 className="text-xl font-semibold text-white">Retainer</h3>
-              <p className="mt-2 text-sm text-gray-400">
-                Dedicated AI support on a monthly basis. Ideal for continuous
-                improvement and scaling.
-              </p>
-            </div>
-          </div>
+      {/* CTA */}
+      <section className="py-16 border-t border-white/5">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <h2 className="font-display text-2xl font-bold text-white">
+            Have a technical challenge?
+          </h2>
+          <p className="mt-4 text-gray-400">
+            We love hard problems. Let&apos;s talk about yours.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-500 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-500/25 transition-all hover:bg-brand-600 hover:scale-105"
+          >
+            Get In Touch
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
     </div>

@@ -4,30 +4,30 @@ const steps = [
   {
     number: '01',
     icon: Search,
-    title: 'Discovery',
+    title: 'Understand',
     description:
-      'We deep-dive into your business processes, identify high-impact AI opportunities, and assess technical readiness.',
+      'We deeply understand your problem space, data landscape, and constraints. No solution exists without understanding the mathematics of your domain.',
   },
   {
     number: '02',
     icon: Lightbulb,
-    title: 'Strategy',
+    title: 'Design',
     description:
-      'We design a tailored AI solution architecture with clear milestones, success metrics, and ROI projections.',
+      'We architect a solution grounded in the right mathematical framework — whether that\'s Bayesian inference, optimization theory, or deep learning.',
   },
   {
     number: '03',
     icon: Hammer,
-    title: 'Build',
+    title: 'Build & Validate',
     description:
-      'Our team develops, tests, and iterates on your AI solution with regular check-ins and transparent progress.',
+      'Rigorous implementation with statistical validation. Every model is tested against theoretical bounds and empirical benchmarks.',
   },
   {
     number: '04',
     icon: Rocket,
-    title: 'Deploy & Grow',
+    title: 'Deploy & Evolve',
     description:
-      'We deploy to production, monitor performance, and continuously optimize. Your AI gets smarter over time.',
+      'Production deployment with monitoring, drift detection, and continuous improvement. Your system gets stronger over time.',
   },
 ]
 
@@ -38,11 +38,10 @@ export function ProcessSection() {
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white">
-            How We <span className="text-gradient">Work</span>
+            Our <span className="text-gradient">Process</span>
           </h2>
           <p className="mt-4 text-lg text-gray-400">
-            A proven process that takes you from idea to production AI in weeks,
-            not months.
+            Rigorous methodology from problem formulation to production deployment.
           </p>
         </div>
 
